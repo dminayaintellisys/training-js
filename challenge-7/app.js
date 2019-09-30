@@ -32,10 +32,18 @@ const questions = [
     ])
 ];
 
+/**
+ * Start a new quiz
+ */
 buttonStartQuiz.onclick = () => {
     quiz(0);
 }
 
+/**
+ * Run the quiz
+ * 
+ * @param {number} position - position of the question to do
+ */
 function quiz(position) {
     
     if (position < questions.length) {
@@ -45,6 +53,10 @@ function quiz(position) {
     }
 }
 
+/**
+ * Do a question
+ * @param {number} position - position of the question
+ */
 function doQuestion(position) {
 
     const question = questions[position];
@@ -63,10 +75,21 @@ function doQuestion(position) {
     quiz(++position);
 }
 
+/**
+ * Evaluate if the quiz is finish
+ * 
+ * @param {number} inputAnswer - answer of the user
+ * @returns {boolean} is true if the quiz is finish
+ */
 function isQuizFinish(inputAnswer) {
     return inputAnswer === 'exit' || inputAnswer === null;
 }
 
+/**
+ * Print in console if the answer of the user is right or not
+ * 
+ * @param {boolean} isAnswerRight - the user's answer is right
+ */
 function printResult(isAnswerRight) {
 
     if (isAnswerRight) {
@@ -77,6 +100,9 @@ function printResult(isAnswerRight) {
     }
 }
 
+/**
+ * Finish the quiz
+ */
 function finishQuiz() {
     const score = (MAX_SCORE / questions.length) * goodAnswers;
     console.log('Quiz finished');
