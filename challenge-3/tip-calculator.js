@@ -6,6 +6,12 @@ console.log('bills: \t\t', bills);
 console.log('tips: \t\t', tips);
 console.log('total amounts: \t', totalAmounts);
 
+/**
+ * Calculate the bill's tip
+ *
+ * @param {number} bill - bill
+ * @return {number} bill's tip
+ */
 function calculateTip(bill) {
     
     let tipPercent = 20;
