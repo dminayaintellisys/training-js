@@ -17,7 +17,7 @@ class FamilyBill {
     /**
      * Add one or more bill to the family
      *
-     * @param{number[]} bill - one or more bill to add to the family
+     * @param {number[]} bill - one or more bill to add to the family
      */
     addBill(...bill) {
         this._bills.push(...bill);
